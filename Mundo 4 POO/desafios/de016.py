@@ -1,3 +1,5 @@
+from rich import print,inspect
+
 class Funcionario:
     def __init__(self, nome, setor, cargo):
         self.nome = nome
@@ -5,7 +7,7 @@ class Funcionario:
         self.cargo = cargo
 
     def apresentacao(self):
-        return f"Olá, sou {self.nome} e eu sou {self.cargo} no setor de {self.setor} da empresa Curso em Video.\n"
+        return f"🤝 Olá, sou [blue]{self.nome}[/blue] e eu sou {self.cargo} no setor de {self.setor} da empresa Curso em Video.\n"
 
 
 c1 = Funcionario("Maria", "Administração", "Diretora")
