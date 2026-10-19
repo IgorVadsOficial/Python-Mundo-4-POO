@@ -1,6 +1,5 @@
 from rich import print
 
-
 class Caneta:
     def __init__(self, cor):
         self.cor = cor
@@ -14,7 +13,7 @@ class Caneta:
             print("\n")
 
     def escrever(self, mensagem):
-        cor = self.cor.lower()
+        cor = self.cor.lower().strip()
         if self.destampada == True:
 
             if cor == "azul":
@@ -25,18 +24,18 @@ class Caneta:
                 print(f"[bold red]{mensagem}[/bold red]")
         else:
             if cor == "azul":
-                print(f"A [bold blue]caneta[/bold blue] está tampada")
+                print(f"🚫 A [bold blue]caneta[/bold blue] está tampada!")
             elif cor == "verde":
-                print(f"A [bold green]caneta[/bold green] está tampada")
+                print(f"🚫 A [bold green]caneta[/bold green] está tampada!")
             elif cor == "vermelha":
-                print(f"A [bold red]caneta[/bold red] está tampada")
+                print(f"🚫 A [bold red]caneta[/bold red] está tampada!")
 
 
 c1 = Caneta("azul")
 c2 = Caneta("vermelha")
 c3 = Caneta("verde")
 
-c1.destampar()
+#c1.destampar()
 c2.destampar()
 c3.destampar()
 
