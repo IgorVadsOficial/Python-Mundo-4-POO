@@ -40,7 +40,7 @@ class Professor(Pessoa):
         return super().aniversario()
 
     def dar_aula(self):
-        print(f"O professor {self.nome} comeÇou a dar aula.")
+        print(f"O professor {self.nome} começou a dar aula.")
 
     def estudar(self):
         print(f"{self.nome} é especialista em {self.especialidade} no {self.nivel}.")
@@ -59,4 +59,4 @@ class Funcionario(Pessoa):
         print(f"O funcionário {self.nome} acabou de bater o ponto.")
 
     def estudar(self):
-        print(f"{self.nome} se especializou na área do {self.setor}.")
+        print(f"{self.nome} se especializou na área da{self.setor}.")
