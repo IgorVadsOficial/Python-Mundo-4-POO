@@ -10,17 +10,23 @@ class Personagem(ABC):
         self.golpes = ""
 
     def atacar(self, alvo, forca=100):
-        valor = randint(1, forca)
+        valor = randint(0, forca)
         print(
             f"[green]{self.nome}[/green]([bold violet]{self.vida}[/bold violet]) atacou [red]{alvo.nome}[/red]([violet]{alvo.vida}[/violet]) com [blue]{self.golpes}[/blue] de força [bold violet]{forca}[/bold violet]."
         )
         alvo.vida -= valor
-        print(
-            f"[blue]{alvo.nome}[/blue] recebeu [red]dano de[/red] [bold red]{valor}[/bold red]."
-        )
+
+        if valor > 0:
+            print(
+                f"[blue]{alvo.nome}[/blue] recebeu [red]dano de[/red] [bold red]{valor}[/bold red]."
+            )
+        else:
+            print(f"[red]VOCÊ DEU [bold red]0[/bold red] DE DANO NO {alvo.nome}![/red]")
 
     def receber_dano(self, dano):
-        self.vida -= dano
+        valor = randint(0, dano)
+        self.vida -= valor
+        print(f"[green]{self.nome}[/green] recebeu [red]{dano}[/red] de dano.")
 
     @abstractmethod
     def curar(self):
@@ -45,8 +51,8 @@ class Guerreiro(Personagem):
         return super().receber_dano(dano)
 
     def curar(self):
-        cura = randint(1, 100)
-        self.vida += self.vida
+        cura = randint(0, 100)
+        self.vida += cura
         print(
             f"[bold blue]{self.nome}[/bold blue] enrolou uma atadura nos ferimentos e [green]recuperou [bold green]{cura}[/bold green] pontos[/green] de vida."
         )
@@ -62,7 +68,7 @@ class Mago(Personagem):
         elif golpe == 2:
             self.golpes = "Magia Estática"
         elif golpe == 3:
-            self.golpes = "Raio Congelante"
+            self.golpes = "Raio de Luz"
 
     def atacar(self, alvo, forca=100):
         return super().atacar(alvo, forca)
@@ -71,8 +77,8 @@ class Mago(Personagem):
         return super().receber_dano(dano)
 
     def curar(self):
-        cura = randint(1, 100)
-        self.vida += self.vida
+        cura = randint(0, 100)
+        self.vida += cura
         print(
             f"[bold blue]{self.nome}[/bold blue] fez uma magia de cura e [green]recuperou [bold green]{cura}[/bold green] pontos[/green] de vida."
         )
