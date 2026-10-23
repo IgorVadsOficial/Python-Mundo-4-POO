@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-
+from math import pi
 
 class Poligono(ABC):
     def __init__(self):
@@ -32,7 +32,7 @@ class Circulo(Poligono):
         self.raio = raio
 
     def perimetro(self):
-        return 2 * 3.14 * self.raio
+        return 2 * pi * self.raio
 
     def area(self):
-        return 3.14 * pow(self.raio, 2)
+        return pi * pow(self.raio, 2)

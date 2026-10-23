@@ -33,7 +33,7 @@ class Horista(Funcionario):
 
     def calc_sal(self):
         bruto = self.valor_hora * self.horas_trab
-        return bruto - bruto * (self.inss / 100)
+        return bruto - (bruto * (self.inss / 100))
 
 
 class Mensalista(Funcionario):
@@ -42,4 +42,4 @@ class Mensalista(Funcionario):
         self.sal_bruto = sal_bruto
 
     def calc_sal(self):
-        return self.sal_bruto - self.sal_bruto * (self.inss / 100)
+        return self.sal_bruto - (self.sal_bruto * (self.inss / 100))
