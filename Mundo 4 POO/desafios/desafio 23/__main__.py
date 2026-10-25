@@ -1,4 +1,4 @@
-from classes import Poligono,Quadrado,Circulo
+from classes import Poligono, Quadrado, Circulo
 
 p1 = Circulo(12)
 

@@ -36,7 +36,7 @@ c1 = Caneta("azul")
 c2 = Caneta("vermelha")
 c3 = Caneta("verde")
 
-#c1.destampar()
+# c1.destampar()
 c2.destampar()
 c3.destampar()
 

@@ -1,5 +1,4 @@
 class ContaBancaria:
-    
     """Cria uma conta bancária e permite fazer saques e depósitos"""
 
     def __init__(self, id, nome, saldo=0):
@@ -11,8 +10,8 @@ class ContaBancaria:
         )
 
     def __str__(self):
-        #return f"A conta {self.id} de {self._titular} tem R${self.__saldo}."
-        return(f"Estado atual da conta: {self.__dict__}")
+        # return f"A conta {self.id} de {self._titular} tem R${self.__saldo}."
+        return f"Estado atual da conta: {self.__dict__}"
 
     def depositar(self, valor):
         valor = abs(valor)

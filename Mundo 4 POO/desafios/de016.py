@@ -1,5 +1,6 @@
 from rich import print
 
+
 class Funcionario:
     def __init__(self, nome, setor, cargo):
         self.nome = nome

@@ -20,10 +20,16 @@ class Livro:
             cont += 1
 
         if self.pagina_atual == self.paginas:
-            print(f"[bold blue]Você avançou {cont} páginas e agora está na [bold yellow]página {self.pagina_atual}[/bold yellow]")
-            print(f"[bold red]🚨 Você chegou ao final do livro '{self.nome}'[/bold red]")
+            print(
+                f"[bold blue]Você avançou {cont} páginas e agora está na [bold yellow]página {self.pagina_atual}[/bold yellow]"
+            )
+            print(
+                f"[bold red]🚨 Você chegou ao final do livro '{self.nome}'[/bold red]"
+            )
         else:
-            print(f"[bold blue]Você avançou {avancar} páginas e agora está na [bold yellow]página {self.pagina_atual}[/bold yellow]")
+            print(
+                f"[bold blue]Você avançou {avancar} páginas e agora está na [bold yellow]página {self.pagina_atual}[/bold yellow]"
+            )
 
 
 li = Livro("Dez coisas que eu aprendi", 20)

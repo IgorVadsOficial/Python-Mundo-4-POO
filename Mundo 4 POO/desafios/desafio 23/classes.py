@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from math import pi
 
+
 class Poligono(ABC):
     def __init__(self):
         self.qtd_lados = 0
